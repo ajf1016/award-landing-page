@@ -103,7 +103,7 @@ const AwardItemCard = styled.div`
 	border-bottom-color: #af50a0;
 	border-radius: 8px;
 	transition: 0.4s ease-in-out;
-	margin-right: 3%;
+	margin-right: 1%;
 	&:last-child {
 		margin-right: 0;
 	}

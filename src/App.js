@@ -1,5 +1,6 @@
 import './App.css';
 import Awards from './components/screens/Awards';
+import Contact from './components/screens/Contact';
 import Home from './components/screens/Home';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       {/* <Navbar /> */}
       <Home />
       <Awards />
-
+      <Contact />
     </>
   );
 }
