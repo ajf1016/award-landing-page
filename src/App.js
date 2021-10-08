@@ -1,10 +1,14 @@
 import './App.css';
-import Navbar from './components/screens/Navbar';
+import Awards from './components/screens/Awards';
+import Home from './components/screens/Home';
 
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Home />
+      <Awards />
+
     </>
   );
 }

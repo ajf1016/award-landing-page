@@ -40,7 +40,7 @@ function Navbar() {
 }
 
 const NavbarContainer = styled.header`
-	padding: 2% 0;
+	padding: 0 0 3%;
 	text-transform: capitalize;
 `;
 const NavbarWrapper = styled.section`
@@ -75,6 +75,7 @@ const NavLinks = styled.ul`
 `;
 const NavInnerLink = styled.a`
 	color: var(--gray-color);
+    cursor: pointer;
     &:hover{
         color: #fff;
         transition: .2s ease-in-out;
@@ -82,16 +83,17 @@ const NavInnerLink = styled.a`
 `;
 const NavLinkItem = styled.li`
 	font-size: 20px;
-	margin-right: 30px;
+	margin-right: 50px;
 `;
 const NavBtn = styled.button`
 	padding: 14px 24px;
 	text-transform: capitalize;
 	font-size: 23px;
-	color: #e44a18;
+	color: var(--orange-color);
 	position: relative;
 	background: #141414;
 	border-radius: 8px;
+    margin-left: 30px;
 	&::after {
 		content: "";
 		display: block;
