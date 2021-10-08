@@ -14,7 +14,7 @@ function Home() {
     }
 	return (
 		<>
-			<HomeSection>
+			<HomeSection id="home">
 				<Navbar toggle={toggle}/>
                 <Sidebar toggle={toggle} isOpen={isOpen}/>
 				<HomeWrapper>
@@ -189,6 +189,9 @@ const RightImg = styled.img`
 	display: inline-block;
 	width: 100%;
 	transform: translateY(-40px);
+    @media all and (max-width: 1440px) {
+		transform: translateX(75px);
+	}
 	@media all and (max-width: 1050px) {
 		transform: translateX(10%);
 	}

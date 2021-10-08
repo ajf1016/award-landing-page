@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/images/logo.svg";
 import { RiMenu3Line } from "react-icons/ri";
+import { Link } from "react-scroll";
 
-function Navbar({toggle}) {
+function Navbar({ toggle }) {
 	return (
 		<>
 			<NavbarContainer>
@@ -18,16 +19,44 @@ function Navbar({toggle}) {
 					<NavbarRight>
 						<NavLinks>
 							<NavLinkItem>
-								<NavInnerLink>home</NavInnerLink>
+								<NavInnerLink
+									to="home"
+									spy={true}
+									smooth={true}
+									duration={500}
+								>
+									home
+								</NavInnerLink>
 							</NavLinkItem>
 							<NavLinkItem>
-								<NavInnerLink>about us</NavInnerLink>
+								<NavInnerLink
+									to="about"
+									spy={true}
+									smooth={true}
+									duration={500}
+								>
+									about us
+								</NavInnerLink>
 							</NavLinkItem>
 							<NavLinkItem>
-								<NavInnerLink>awards</NavInnerLink>
+								<NavInnerLink
+									to="award"
+									spy={true}
+									smooth={true}
+									duration={500}
+								>
+									awards
+								</NavInnerLink>
 							</NavLinkItem>
 							<NavLinkItem>
-								<NavInnerLink>contact us</NavInnerLink>
+								<NavInnerLink
+									to="contact"
+									spy={true}
+									smooth={true}
+									duration={500}
+								>
+									contact us
+								</NavInnerLink>
 							</NavLinkItem>
 						</NavLinks>
 						<NavBtn>get started</NavBtn>
@@ -41,31 +70,30 @@ function Navbar({toggle}) {
 	);
 }
 
-
 const IconContainer = styled.div`
-    position: absolute;
-    top: 10px;
-    right: 0;
-    color: #fff;
-    font-size: 40px;
-    color: #af50a0;
-    cursor: pointer;
-    display: none;
-    @media all and (max-width : 980px){
-        display: block;
-    }
-    @media all and (max-width : 480px){
-        font-size: 30px;
-    }
-    @media all and (max-width : 360px){
-        font-size: 30px;
-        top: 0;
-    }
-`
+	position: absolute;
+	top: 10px;
+	right: 0;
+	color: #fff;
+	font-size: 40px;
+	color: #af50a0;
+	cursor: pointer;
+	display: none;
+	@media all and (max-width: 980px) {
+		display: block;
+	}
+	@media all and (max-width: 480px) {
+		font-size: 30px;
+	}
+	@media all and (max-width: 360px) {
+		font-size: 30px;
+		top: 0;
+	}
+`;
 const NavbarContainer = styled.header`
 	padding: 0 0 3%;
 	text-transform: capitalize;
-    
+
 	@media all and (max-width: 1050px) {
 		padding-top: 2%;
 	}
@@ -80,7 +108,7 @@ const NavbarWrapper = styled.section`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-    position: relative;
+	position: relative;
 `;
 const NavbarLeft = styled.div`
 	width: 35%;
@@ -123,7 +151,7 @@ const NavLinks = styled.ul`
 	display: flex;
 	align-items: center;
 `;
-const NavInnerLink = styled.a`
+const NavInnerLink = styled(Link)`
 	color: var(--gray-color);
 	cursor: pointer;
 	&:hover {
@@ -159,8 +187,8 @@ const NavBtn = styled.button`
 	&::after {
 		content: "";
 		display: block;
-		width: 103%;
-		height: 107%;
+		width: 170px;
+		height: 61px;
 		background: rgb(175, 80, 160);
 		background: linear-gradient(
 			273deg,
@@ -169,10 +197,18 @@ const NavBtn = styled.button`
 			rgba(175, 80, 160, 1) 100%
 		);
 		position: absolute;
-		top: -2px;
-		left: -3px;
+		top: -3px;
+		left: -2px;
 		z-index: -1;
-		border-radius: 8px;
+		border-radius: 9px;
+		@media all and (max-width: 1280px) {
+			width: 126px;
+			height: 55px;
+			top: -2px;
+		}
+		@media all and (max-width: 1050px) {
+			height: 50px;
+		}
 	}
 	@media all and (max-width: 1280px) {
 		font-size: 18px;

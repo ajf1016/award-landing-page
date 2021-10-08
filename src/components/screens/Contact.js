@@ -6,7 +6,7 @@ import Footer from "./Footer";
 function Contact() {
 	return (
 		<>
-			<ContactSecton>
+			<ContactSecton id='contact'>
 				<ContactWrapper
 					style={{ backgroundImage: `url("${Background}")` }}
 				>

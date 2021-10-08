@@ -9,7 +9,7 @@ import styled from "styled-components";
 function Awards() {
 	return (
 		<>
-			<AwardSection>
+			<AwardSection id="award">
 				<AwardWrapper>
 					<AwardItemCard>
 						<AwardTop>
@@ -103,7 +103,7 @@ const AwardWrapper = styled.section`
 	margin: 0 auto;
 	display: flex;
 	align-items: stretch;
-    @media all and (max-width: 1280px) {
+	@media all and (max-width: 1280px) {
 		flex-wrap: wrap;
 	}
 `;
@@ -129,35 +129,37 @@ const AwardItemCard = styled.div`
 		.color-change {
 			color: #fff;
 		}
-		/* background: rgb(175, 80, 160); */
+		background: rgb(175, 80, 160);
 		background: linear-gradient(
 			335deg,
 			rgba(175, 80, 160, 1) 1%,
 			rgba(228, 74, 24, 1) 100%,
 			rgba(175, 80, 160, 1) 100%
 		);
-		transition: 0.5s ease-in-out;
-
-		/* padding: 50px 25px; */
+		transition: all 300ms ease-in-out;
+		-webkit-transition: all 300ms ease-in-out;
+		-moz-transition: all 300ms ease-in-out;
+		-ms-transition: all 300ms ease-in-out;
+		-o-transition: all 300ms ease-in-out;
 		transform: scaleY(1.1);
 	}
 	@media all and (max-width: 1440px) {
 		margin-right: 3%;
 	}
-    @media all and (max-width: 1280px) {
+	@media all and (max-width: 1280px) {
 		width: 49%;
-        margin-right: 2%;
-        margin-bottom: 5%;
-        &:nth-child(2n){
-            margin-right: 0;
-        }
+		margin-right: 2%;
+		margin-bottom: 5%;
+		&:nth-child(2n) {
+			margin-right: 0;
+		}
 	}
-    @media all and (max-width: 640px) {
+	@media all and (max-width: 640px) {
 		width: 100%;
-        margin-right: 0;
-        margin-bottom: 10%;
+		margin-right: 0;
+		margin-bottom: 10%;
 	}
-    @media all and (max-width: 360px) {
+	@media all and (max-width: 360px) {
 		margin-bottom: 15%;
 	}
 `;
@@ -177,17 +179,17 @@ const IconImg = styled.img`
 		width: 24%;
 		padding: 10px;
 	}
-    @media all and (max-width: 1280px) {
-		width : 14%;
+	@media all and (max-width: 1280px) {
+		width: 14%;
 	}
-    @media all and (max-width: 480px) {
-		width : 20%;
+	@media all and (max-width: 480px) {
+		width: 20%;
 	}
 `;
 const DateSpan = styled.span`
 	font-size: 18px;
 	color: ${({ hover }) => (hover ? "#fff" : "var(--gray-color)")};
-    @media all and (max-width: 1440px) {
+	@media all and (max-width: 1440px) {
 		font-size: 15px;
 	}
 `;
@@ -220,7 +222,7 @@ const AwardBottom = styled.section`
 const CountrySpan = styled.span`
 	font-size: 18px;
 	color: #fff;
-    @media all and (max-width: 1440px) {
+	@media all and (max-width: 1440px) {
 		font-size: 15px;
 	}
 `;

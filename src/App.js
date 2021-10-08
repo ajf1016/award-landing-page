@@ -6,8 +6,7 @@ import Home from './components/screens/Home';
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
-      <Home />
+      <Home /> 
       <Awards />
       <Contact />
     </>

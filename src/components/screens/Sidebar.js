@@ -1,26 +1,59 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineClose } from "react-icons/ai";
-function Sidebar({isOpen,toggle}) {
+import { Link } from "react-scroll";
+function Sidebar({ isOpen, toggle }) {
 	return (
 		<>
 			<SidebarContainer isOpen={isOpen}>
 				<SidebarWrapper>
-                <IconContainer onClick={toggle}>
+					<IconContainer onClick={toggle}>
 						<AiOutlineClose />
 					</IconContainer>
 					<SideLinks>
 						<SideLinkItem>
-							<SideInnerLink>home</SideInnerLink>
+							<SideInnerLink
+								to="home"
+								spy={true}
+								smooth={true}
+								duration={500}
+								onClick={toggle}
+							>
+								home
+							</SideInnerLink>
 						</SideLinkItem>
 						<SideLinkItem>
-							<SideInnerLink>about us</SideInnerLink>
+							<SideInnerLink
+								to="about"
+								spy={true}
+								smooth={true}
+								duration={500}
+								onClick={toggle}
+							>
+								about us
+							</SideInnerLink>
 						</SideLinkItem>
 						<SideLinkItem>
-							<SideInnerLink>awards</SideInnerLink>
+							<SideInnerLink
+								to="award"
+								spy={true}
+								smooth={true}
+								duration={500}
+								onClick={toggle}
+							>
+								awards
+							</SideInnerLink>
 						</SideLinkItem>
 						<SideLinkItem>
-							<SideInnerLink>contact us</SideInnerLink>
+							<SideInnerLink
+								to="contact"
+								spy={true}
+								smooth={true}
+								duration={500}
+								onClick={toggle}
+							>
+								contact us
+							</SideInnerLink>
 						</SideLinkItem>
 					</SideLinks>
 					<SideBtn>get started</SideBtn>
@@ -44,12 +77,12 @@ const SidebarContainer = styled.div`
 	position: fixed;
 	z-index: 10;
 	width: 100%;
-	top: ${({isOpen}) => (isOpen ? '0' : '-1000px')};
+	top: ${({ isOpen }) => (isOpen ? "0" : "-1000px")};
 	left: 0;
-    display: none;
-	opacity: ${({isOpen}) => (isOpen ? '1' : '0')};
-    transition: all .3s ease-in-out;
-    @media all and (max-width: 980px) {
+	display: none;
+	opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
+	transition: all 0.3s ease-in-out;
+	@media all and (max-width: 980px) {
 		display: block;
 	}
 `;
@@ -70,7 +103,9 @@ const SideLinkItem = styled.li`
 		font-size: 30px;
 	}
 `;
-const SideInnerLink = styled.a``;
+const SideInnerLink = styled(Link)`
+	cursor: pointer;
+`;
 const SideBtn = styled.button`
 	padding: 15px 30px;
 	font-size: 30px;
@@ -97,7 +132,7 @@ const IconContainer = styled.div`
 	right: 50px;
 	font-size: 50px;
 	color: #fff;
-    @media all and (max-width: 480px) {
+	@media all and (max-width: 480px) {
 		font-size: 35px;
 	}
 `;

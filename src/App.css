@@ -12,6 +12,9 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+html{
+	scroll-behavior: smooth;
+}
 :root {
 	--big-font: "Gordita Medium";
 	--orange-color: #d45945;
