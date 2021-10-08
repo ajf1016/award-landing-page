@@ -29,9 +29,7 @@ function Navbar() {
 								<NavInnerLink>contact us</NavInnerLink>
 							</NavLinkItem>
 						</NavLinks>
-						<NavBtnContainer>
-							<NavBtn>get started</NavBtn>
-						</NavBtnContainer>
+						<NavBtn>get started</NavBtn>
 					</NavbarRight>
 				</NavbarWrapper>
 			</NavbarContainer>
@@ -42,6 +40,12 @@ function Navbar() {
 const NavbarContainer = styled.header`
 	padding: 0 0 3%;
 	text-transform: capitalize;
+    @media all and (max-width : 1050px){
+        padding-top: 2%;
+    }
+    @media all and (max-width : 640px){
+        padding-top: 6%;
+    }
 `;
 const NavbarWrapper = styled.section`
 	width: 80%;
@@ -52,10 +56,22 @@ const NavbarWrapper = styled.section`
 	align-items: center;
 `;
 const NavbarLeft = styled.div`
-	width: 50%;
+	width: 35%;
+    @media all and (max-width : 980px){
+       width: 50%;
+    }
 `;
 const NavLogo = styled.h1`
 	width: 45%;
+	@media all and (max-width: 1440px) {
+		width: 70%;
+	}
+    @media all and (max-width : 980px){
+       width: 80%;
+    }
+    @media all and (max-width : 768px){
+       width: 100%;
+    }
 `;
 const NavLogoLink = styled.a`
 	display: inline-block;
@@ -68,6 +84,13 @@ const NavLogoImg = styled.img`
 const NavbarRight = styled.div`
 	display: flex;
 	width: 50%;
+	@media all and (max-width: 1440px) {
+		width: 75%;
+		justify-content: end;
+	}
+    @media all and (max-width : 980px){
+        display: none;
+    }
 `;
 const NavLinks = styled.ul`
 	display: flex;
@@ -75,15 +98,27 @@ const NavLinks = styled.ul`
 `;
 const NavInnerLink = styled.a`
 	color: var(--gray-color);
-    cursor: pointer;
-    &:hover{
-        color: #fff;
-        transition: .2s ease-in-out;
-    }
+	cursor: pointer;
+	&:hover {
+		color: #fff;
+		transition: 0.2s ease-in-out;
+	}
 `;
 const NavLinkItem = styled.li`
 	font-size: 20px;
 	margin-right: 50px;
+
+	@media all and (max-width: 1440px) {
+		margin-right: 30px;
+	}
+	@media all and (max-width: 1280px) {
+		font-size: 18px;
+		margin-right: 20px;
+	}
+    @media all and (max-width: 1050px) {
+		font-size: 16px;
+		margin-right: 15px;
+	}
 `;
 const NavBtn = styled.button`
 	padding: 14px 24px;
@@ -93,7 +128,7 @@ const NavBtn = styled.button`
 	position: relative;
 	background: #141414;
 	border-radius: 8px;
-    margin-left: 30px;
+	margin-left: 30px;
 	&::after {
 		content: "";
 		display: block;
@@ -112,7 +147,15 @@ const NavBtn = styled.button`
 		z-index: -1;
 		border-radius: 8px;
 	}
+    @media all and (max-width: 1280px) {
+		font-size: 18px;
+		margin-left: 25px;
+        padding: 15px;
+	}
+    @media all and (max-width: 1050px) {
+		margin-left: 10px;
+        padding: 13px 15px;
+	}
 `;
-const NavBtnContainer = styled.div``;
 
 export default Navbar;

@@ -40,6 +40,15 @@ const ContactWrapper = styled.section`
 	background-size: cover;
 	padding: 70px 40px;
 	border-radius: 20px;
+    @media all and (max-width : 980px){
+        background-position-x: -250px;
+    }
+    @media all and (max-width : 640px){
+        padding: 60px 25px;
+    }
+    @media all and (max-width : 360px){
+        padding: 50px 18px;
+    }
 `;
 const ContactContent = styled.div``;
 const ContactHead = styled.h2`
@@ -48,18 +57,67 @@ const ContactHead = styled.h2`
 	color: #fff;
 	font-family: var(--big-font);
 	width: 50%;
+    @media all and (max-width : 1280px){
+        width: 100%;
+    }
+    @media all and (max-width : 1050px){
+        font-size: 45px;
+    }
+    @media all and (max-width : 980px){
+        font-size: 40px;
+    }
+    @media all and (max-width : 768px){
+        font-size: 30px;
+    }
+    @media all and (max-width : 640px){
+        font-size: 23px;
+    }
 `;
 const ContactPara = styled.p`
 	font-size: 25px;
 	color: var(--gray-color);
 	width: 45%;
 	margin: 30px 0;
+    @media all and (max-width : 1280px){
+        width: 95%;
+    }
+    @media all and (max-width : 1050px){
+        font-size: 22px;
+        width: 90%;
+    }
+    @media all and (max-width : 980px){
+        font-size: 20px;
+    }
+    @media all and (max-width : 768px){
+        font-size: 18px;
+    }
+    @media all and (max-width : 640px){
+        font-size: 15px;
+    }
+    @media all and (max-width : 640px){
+        width: 100%;
+    }
 `;
 const ContactForm = styled.form`
 	display: flex;
 	width: 30%;
 	position: relative;
 	align-items: center;
+    @media all and (max-width : 1440px){
+        width: 50%;
+    }
+    @media all and (max-width : 1050px){
+        width: 60%;
+    }
+    @media all and (max-width : 980px){
+        width: 70%;
+    }
+    @media all and (max-width : 768px){
+        width: 90%;
+    }
+    @media all and (max-width : 640px){
+        width: 100%;
+    }
 `;
 const FormInput = styled.input`
 	background: #fff;
@@ -68,6 +126,27 @@ const FormInput = styled.input`
 	font-size: 20px;
 	border-radius: 10px;
 	width: 100%;
+    @media all and (max-width : 1050px){
+        font-size: 18px;
+    }
+    @media all and (max-width : 768px){
+        font-size: 16px;
+    }
+    @media all and (max-width : 640px){
+        padding: 12px;
+        border-radius: 8px;
+    }
+    @media all and (max-width : 640px){
+        width: 100%;
+    }
+    @media all and (max-width : 640px){
+        padding: 10px;
+        font-size: 14px;
+    }
+    @media all and (max-width : 360px){
+        font-size: 13px;
+    }
+    
 `;
 const FormBtn = styled.button`
 	position: absolute;
@@ -86,6 +165,23 @@ const FormBtn = styled.button`
 	padding: 19px 29px;
 	border-radius: 10px;
 	cursor: pointer;
+    @media all and (max-width : 1050px){
+        font-size: 18px;
+    }
+    @media all and (max-width : 768px){
+        font-size: 16px;
+    }
+    @media all and (max-width : 640px){
+        padding: 15px;
+        border-radius: 8px;
+    }
+    @media all and (max-width : 640px){
+        padding: 12px;
+        font-size: 14px;
+    }
+    @media all and (max-width : 360px){
+        padding: 12px 5px;
+    }
 `;
 
 export default Contact;
