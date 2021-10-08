@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import spotImg from "../assets/images/spot - image.svg";
 import blurImg from "../assets/images/pattern - color.png";
+import Sidebar from "./Sidebar";
 
 function Home() {
+
+    const [isOpen,setIsOpen] = useState(false)
+
+    function toggle (){
+        setIsOpen(!isOpen)
+    }
 	return (
 		<>
 			<HomeSection>
-				<Navbar />
+				<Navbar toggle={toggle}/>
+                <Sidebar toggle={toggle} isOpen={isOpen}/>
 				<HomeWrapper>
 					<HomeLeft>
 						<HomeHeading>
