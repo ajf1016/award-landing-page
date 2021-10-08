@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:root {
+	--big-font: "Gordita Medium";
+	--orange-color: #d45945;
+	--rose-color: #a14d9b;
+	--gray-color: #5b5a5d;
+	--backgound-color: #141414;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after {
+	content: "";
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+header,
+section,
+article,
+aside,
+nav,
+footer,
+address {
+	display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+	font-family: "Gordita Medium";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Gordita Medium"),
+		url("./components/assets/fonts/Gordita Medium.woff") format("woff");
+}
+@font-face {
+	font-family: "Gordita Regular";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Gordita Regular"),
+		url("./components/assets/fonts/Gordita Regular.woff") format("woff");
+}
+body {
+	font-family: "Gordita Regular", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #333;
+	overflow-x: hidden;
+	min-width: 320px;
+}
+input,
+textarea,
+select {
+	font-family: "Gordita Regular", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* a:hover,
+[type="submit"]:hover {
+	filter: alpha(opacity = 85);
+	-moz-opacity: 0.85;
+	-khml-opacity: 0.85;
+	opacity: 0.85;
+} */
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
 }
