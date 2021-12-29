@@ -134,6 +134,7 @@ const IconContainer = styled.div`
 	color: #fff;
 	@media all and (max-width: 480px) {
 		font-size: 35px;
+		right: 0;
 	}
 `;
 
